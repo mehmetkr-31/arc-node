@@ -19,7 +19,6 @@
 use malachitebft_core_consensus::{ProposedValue, SignedConsensusMsg};
 use malachitebft_core_types::PolkaCertificate;
 
-use crate::codec::impl_versioned_codec;
 use crate::codec::versions::{
     PolkaCertificateVersion, ProposedValueVersion, SignedConsensusMsgVersion,
 };

@@ -23,7 +23,6 @@ use malachitebft_core_types::ValidatorProof;
 use malachitebft_sync::{self as sync};
 
 use crate::codec::error::CodecError;
-use crate::codec::impl_versioned_codec;
 use crate::codec::proto::ProtobufCodec;
 use crate::codec::versions::{
     LivenessMsgVersion, ProposalPartVersion, SignedConsensusMsgVersion, StreamMessageVersion,

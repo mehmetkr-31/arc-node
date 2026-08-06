@@ -77,8 +77,6 @@ macro_rules! impl_versioned_codec {
     };
 }
 
-pub(crate) use impl_versioned_codec;
-
 pub mod error;
 pub mod network;
 pub mod proto;
