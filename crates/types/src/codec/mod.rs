@@ -26,6 +26,11 @@ pub use malachitebft_codec::{Codec, HasEncodedLen};
 /// - `$ty`: The message type to encode/decode
 /// - `$version_ty`: The version enum type
 /// - `$version_val`: The specific version value to use
+///
+/// Must stay above the `pub mod` declarations at the bottom of this file:
+/// `network` and `wal` reach this macro through textual scope, not through a
+/// path, so moving the module declarations above it — or moving this below
+/// them — breaks all 11 invocation sites with `cannot find macro`.
 macro_rules! impl_versioned_codec {
     ($codec_ty:ty, $ty:ty, $version_ty:ty, $version_val:expr) => {
         impl malachitebft_codec::Codec<$ty> for $codec_ty {
